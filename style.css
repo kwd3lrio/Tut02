@@ -41,7 +41,7 @@ section {
 }
 .intro button,
 .match button,
-.restart button {
+.reset button {
   width: 150px;
   height: 50px;
   background: none;

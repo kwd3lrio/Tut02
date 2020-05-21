@@ -1,3 +1,4 @@
+
 const game = () => {
   let pScore = 0;
   let cScore = 0;
@@ -45,14 +46,14 @@ const game = () => {
         playerHand.style.animation = "shakePlayer 2s ease";
         computerHand.style.animation = "shakeComputer 2s ease";
       });
-    });
+    });         
   };
 
   const updateScore = () => {
     const playerScore = document.querySelector(".player-score p");
     const computerScore = document.querySelector(".computer-score p");
     playerScore.textContent = pScore;
-    computerScore.textContent = cScore;
+    computerScore.textContent = cScore;    
   };
 
   const compareHands = (playerChoice, computerChoice) => {
@@ -104,13 +105,24 @@ const game = () => {
         updateScore();
         return;
       }
-    }
-  };
+    }       
 
-  //Is call all the inner function
-  startGame();
-  playMatch();
+  };  
+
+      //Is call all the inner function
+      startGame();
+      playMatch();
+  
 };
 
+        
 //start the game function
 game();
+
+// RESTART BUTTON ACTIONS
+var restartBtn = document.getElementById("restartBtn");
+restartBtn.addEventListener('click', gameRestart);
+
+function gameRestart(){
+   game();
+}
